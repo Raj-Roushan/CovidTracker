@@ -1,0 +1,100 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  
+  min-height: 80vh;
+  flex-wrap: wrap;
+  background: #010615;
+}
+.container{
+  align-content: flex-start  flex-end  center  space-between ;
+}
+.hea{
+  color: #e41414;
+}
+h2{
+  grid-row:1;
+}
+.box{
+  position:relative;
+  width: 280px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #060c21;
+  margin: 20px;
+}
+.box:before{
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -1;
+}
+.box:after{
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -2;
+  filter: blur(40px);
+}
+.box:nth-child(1):before
+.box:nth-child(1):after
+{
+  background: linear-gradient(235deg,#89ff00,#010615,#00bcd4);
+}
+.box:nth-child(2):before
+.box:nth-child(2):after
+{
+  background: linear-gradient(235deg,#ff005e,#010615,#fbff00);
+}
+.box:nth-child(3):before
+.box:nth-child(3):after
+{
+  background: linear-gradient(235deg,#772aff,#010615,#2196f3);
+}
+.box:nth-child(4):before
+.box:nth-child(4):after
+{
+  background: linear-gradient(235deg,#0bb937,#010615,#083e6b);
+}
+.box:nth-child(5):before
+.box:nth-child(5):after
+{
+  background: linear-gradient(235deg,#024914,#010615,#d67d17);
+}
+
+.box:nth-child(6):before
+.box:nth-child(6):after
+{
+  background: linear-gradient(235deg,#630763,#010615,#3b2914);
+}
+
+.box .glass {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  display: block;
+  background: rgba(255,255,255,.1);
+  pointer-events: none;
+}
+.box .content{
+  padding: 20px;
+  color: #fff;
+}
